@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سبد خرید</title>
+ 
+  <link rel="stylesheet" href="shoppingCart.css" />
+</head>
+<body>
+
+  <!-- هدر با نام و لوگوی فروشگاه -->
+
+  <header class="main-header ">
+
+ <div class="nav-icons">
+    
+    <div class="nav-hamburger">☰</div>
+  </div>
+  
+  <div class="logo-container">
+    <img src="logo.png" alt="لوگو" class="logo-image" />
+    <span class="logo-text">موبایل آرمین</span>
+  </div>
+
+</header>
+  
+ <!-- ایجاد زیر منو های منوی همبرگری فروشگاه -->
+     <nav class="nav-menu" id="nav-menu">
+  <ul class="nav-list">
+    
+            <li class="nav-item"><a class="nav-link" href="home.html">خانه</a></li>
+            <li class="nav-item"><a class="nav-link" href="product card.html">محصولات</a></li> 
+            <li class="nav-item"><a class="nav-link" href="#about">درباره ما</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">تماس با ما</a></li>
+            <li class="nav-item"><a class="nav-link" href="#profile">حساب کاربری</a></li>
+            <li class="nav-item"><a class="nav-link" href="#login">ورود / ثبت‌نام</a></li>
+            <li class="nav-item"><a class="nav-link" href="#support">پشتیبانی</li>
+            
+      </ul>  
+</nav>
+
+    <main>
+   <div class="title-container">
+        <h1>سبد خرید شما</h1>
+        </div>
+ 
+   <!-- محتوای صفحه سبد خرید -->
+  
+        <div id="products-container">
+        <!-- آیتم‌های سبد خرید در اینجا نمایش داده می‌شوند -->
+        </div>
+        <div class="pay-container">
+        <div class="total-container">
+        <h3>جمع کل: <span id="total-price">0</span></h3>
+        <button type="button" class="pay-button" >پرداخت</button>
+        </div>
+        </div>
+        </main>
+
+<footer class="main-footer">
+  <div class="footer-content">
+    <p>© 2025 موبایل آرمین | تمامی حقوق محفوظ است.</p>
+    <p>تماس: info@mobilearmin.com</p>
+  </div>
+</footer>
+
+
+    <!-- اسکریپت برای مدیریت سبد خرید -->
+    <script src="shoppingCart.js"></script>
+   
+    
+</body>
+</html>
+
+

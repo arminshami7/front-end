@@ -1,0 +1,15 @@
+*{
+    margin: 10px 0px;
+}
+
+body{
+     display: flex;
+    flex-direction:column;
+    align-items: center;
+    direction: ltr;
+    font-weight:bolder;
+    font-style: oblique;
+    font-variant: small-caps;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+

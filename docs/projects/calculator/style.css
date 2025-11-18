@@ -1,0 +1,254 @@
+/* ------------------- بدنه و کل صفحه ------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+/* ------------------- قاب ماشین حساب ------------------- */
+.calculator {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 320px;
+}
+
+/* ------------------- نمایشگر ------------------- */
+#display {
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: left;      /* متن از چپ به راست */
+    direction: ltr;        /* جهت متن Left to Right */
+    overflow-x: auto;      /* اسکرول افقی اگر طولانی شود */
+    white-space: nowrap;   /* جلوگیری از شکست خط */
+    box-sizing: border-box;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+/* ------------------- دکمه‌ها ------------------- */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px #111;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #111;
+}
+
+/* رنگ‌های مخصوص عملگرها */
+.btn:nth-child(4),
+.btn:nth-child(8),
+.btn:nth-child(12),
+.btn:nth-child(16) {
+    background-color: #ff9500;
+    color: #fff;
+}
+
+/* دکمه C */
+.btn:nth-child(17),
+.btn:nth-child(18) {
+    background-color: #ff3b30;
+    color: #fff;
+}
+
+
+
+/* دکمه = */
+.btn:last-child{
+    grid-column: span 2;
+    background-color: #0077ff;
+}
+
+/* هاور روی دکمه‌ها */
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* ------------------- بخش تاریخچه ------------------- */
+.history-container {
+    margin-top: 20px;
+    background-color: #111;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+    max-height: 200px;         /* بیشترین ارتفاع */
+    overflow-y: auto;          /* اسکرول عمودی اگر زیاد شد */
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* عنوان تاریخچه */
+.history-container h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #ff9500;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+/* لیست تاریخچه */
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#history-list li {
+    background-color: #222;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s ease;
+    cursor: pointer;
+}
+
+#history-list li:hover {
+    background-color: #333;
+}
+
+/* دکمه حذف تک آیتم */
+#history-list li button {
+    background: transparent;
+    border: none;
+    color: #ff3b30;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#history-list li button:hover {
+    transform: scale(1.2);
+}
+
+/* دکمه پاک کردن کل تاریخچه */
+#clear-history {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff3b30;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#clear-history:hover {
+    opacity: 0.9;
+}
+
+/* ------------------- استایل اسکرول‌ها ------------------- */
+
+/* اسکرول بار کلی */
+::-webkit-scrollbar {
+    width: 8px;        /* پهنای اسکرول عمودی */
+    height: 8px;       /* ارتفاع اسکرول افقی */
+}
+
+/* مسیر اسکرول */
+::-webkit-scrollbar-track {
+    background: #222;  
+    border-radius: 10px;
+}
+
+/* بخش قابل حرکت اسکرول */
+::-webkit-scrollbar-thumb {
+    background: #555;  
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+/* هاور روی اسکرول */
+::-webkit-scrollbar-thumb:hover {
+    background: #888;  
+}
+
+
+/* ------------------- ریسپانسیو ------------------- */
+@media (max-width: 400px) {
+    .calculator {
+        padding: 15px;
+        width: 80%;
+    }
+
+    #display {
+        height: 50px;
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+      .history-container {
+        padding: 10px;
+        max-height: 150px;
+    }
+
+    #history-list li {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    #clear-history {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 300px) {
+      .calculator {
+        padding: 15px;
+        width: 80%;
+    }
+    #display {
+        height: 45px;
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    .btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .buttons {
+        gap: 6px;
+    }
+    }
