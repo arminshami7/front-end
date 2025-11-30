@@ -1,0 +1,102 @@
+.movie-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden; /* باعث میشه گوشه‌های عکس هم گرد بشه */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+  padding: 5px;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 395px; /* ارتفاع ثابت برای زیبایی */
+  object-fit: cover; /* عکس رو بدون تغییر نسبت، فضا رو پر می‌کنه */
+  border-radius: 10px;
+}
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* فاصله بین کارت‌ها */
+  padding: 20px;
+}
+form,h1{
+  display: flex;
+  justify-content: center;
+}
+
+form input {
+   display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 300px;
+  font-size: 16px;
+}
+/* App.css */
+
+/* ... استایل‌های قبلی شما ... */
+
+/* برای پیام خوش‌آمدگویی اولیه یا وقتی فیلمی پیدا نمیشه */
+.initial-prompt, .no-movies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  color: #a0a0a0; /* یک رنگ خاکستری ملایم */
+  text-align: center;
+}
+
+.initial-prompt h2, .no-movies h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.initial-prompt p, .no-movies p {
+  font-size: 16px;
+}
+
+
+/* برای پیام خطا */
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  color: #e74c3c; /* یک رنگ قرمز که حس خطا رو منتقل کنه */
+  background-color: #ffdddd; /* یک پس‌زمینه قرمز خیلی روشن */
+  border: 1px solid #e74c3c;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.error-message h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* برای پیام لودینگ */
+.loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  font-size: 24px;
+  color: #ffffff; /* رنگ سفید برای تم تیره */
+}
+@media (width <= 800px) {
+
+  .movie-card img {
+  height: 205px; /* ارتفاع ثابت برای زیبایی */
+}
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+h3{
+  font-size: 1rem;
+  font-weight:400;
+}
+}
