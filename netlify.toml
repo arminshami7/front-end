@@ -2,4 +2,3 @@
   command = "npm run build"
   publish = "dist"
   base = "web design/portfolio/docs/projects/movie-search-app"
-```    **توضیح:** من تمام کامنت‌ها و متن‌های اضافی رو حذف کردم تا فایل کاملاً تمیز و بدون خطا باشه.
