@@ -14,6 +14,7 @@ function App() {
   const [query, setQuery] = useState("");
 
   const [error, setError] = useState(null);
+  
 
   
 
@@ -23,7 +24,7 @@ const handleSearch = async(e) =>{
   setError(null); // <-- خیلی مهم: خطای قبلی رو پاک می‌کنه
   try{
       const apiKey = import.meta.env.VITE_OMDB_API_KEY;
-      const url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${query}`;
+      const url = `https://www.omdbapi.com/?apikey=${apiKey}&s=${query}`;
        // و بعد این url رو به fetch بده
         const response = await fetch(url);
         const data = await response.json();
