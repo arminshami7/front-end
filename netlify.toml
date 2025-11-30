@@ -1,0 +1,10 @@
+[build]
+  # این دستور بیلد ماست
+  command = "npm run build"
+  
+  # اینجا پوشه نهایی که فایل‌های سایت در اون قرار می‌گیره رو مشخص می‌کنیم
+  # (نسبت به Base)
+  publish = "dist"
+  
+  # اینجا آدرس دقیق پروژه‌مون از ریشه ریپازیتوری هست
+  base = "web design/portfolio/docs/projects/movie-search-app"
