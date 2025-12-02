@@ -1,6 +1,7 @@
+// src/App.jsx (شکل جدید و نهایی)
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import './app.css';
+import './ََApp.css';
 
 function App(){
   return(
