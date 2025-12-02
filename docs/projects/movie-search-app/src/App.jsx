@@ -15,13 +15,14 @@ function App() {
 
   const [error, setError] = useState(null);
   
-
+  const [hasSearched, setHasSearched] = useState(false);
   
 
 const handleSearch = async(e) =>{
   e.preventDefault();
   setIsLoading(true);
   setError(null); // <-- خیلی مهم: خطای قبلی رو پاک می‌کنه
+  setHasSearched(true);
   try{
       const apiKey = import.meta.env.VITE_OMDB_API_KEY;
       const url = `https://www.omdbapi.com/?apikey=${apiKey}&s=${query}`;
@@ -69,7 +70,10 @@ const handleSearch = async(e) =>{
         <MovieCard key={movie.imdbID} movie={movie} />
       ))}
     </div>
-  ) : (
+  ) : hasSearched ? (<div className="no-movies">
+    <h2>No movies found for your search.</h2>
+    <p>Please try a different title.</p>
+  </div>) : (
     <div className="initial-prompt">
       <h2>Search for your favorite movies!</h2>
       <p>Start by typing a movie title in the search bar above.</p>
