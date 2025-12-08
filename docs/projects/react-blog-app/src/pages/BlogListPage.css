@@ -1,0 +1,29 @@
+/* ./src/pages/BlogListPage.css */
+.container {
+  max-width: 800px; /* عرض بیشینه قاب */
+  margin: 0 auto; /* قاب رو وسط صفحه قرار میده */
+  padding: 20px; /* یک فاصله داخلی زیبا */
+}
+
+.blog-list-page h1 {
+  text-align: center;
+  color: #0a51b3;
+  margin-bottom: 40px;
+}
+
+.post-list {
+
+   
+}
+
+
+@media (max-width: 768px) {
+  .post-list {
+
+   }
+
+  .blog-list-page h1 {
+    font-size: 28px; /* کمی عنوان رو کوچیک‌تر می‌کنیم */
+  }
+}
+
