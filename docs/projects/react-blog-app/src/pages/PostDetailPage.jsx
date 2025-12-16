@@ -1,7 +1,6 @@
 // src/pages/PostDetailPage.jsx
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
-import './PostDetailPage.css';
 
 
 function PostDetailPage() {
@@ -40,10 +39,23 @@ function PostDetailPage() {
 
  return (
   post && (
-    <div className="post-detail-page"> {/* <-- کلاس اصلی کانتینر */}
-      <button className="back-button" onClick={() => navigate(-1)}>← Back to List</button>
-      <h1>{post.title}</h1>
-      <p className="post-body">{post.body}</p> {/* <-- کلاس برای پاراگراف اصلی */}
+    <div className="max-w-4x1 mx-auto p-4"> {/* <-- کلاس اصلی کانتینر */}
+     
+      <button onClick={() => navigate(-1)}
+       className="mb-8 bg-gray-700 hover:bg-gray-600 text-white 
+      font-bold py-2 px-4 rounded-lg transition-colors" >
+        &larr; Back to List</button>
+        
+         <article>
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-400">
+          {post.title}
+        </h1>
+        
+        {/* بدنه پست با استایل‌دهی مخصوص متن طولانی */}
+        <div className="prose prose-invert prose-lg max-w-none">
+          {post.body}
+        </div>
+      </article> 
     </div>
   )
 );
