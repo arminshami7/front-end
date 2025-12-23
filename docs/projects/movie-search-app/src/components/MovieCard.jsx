@@ -1,14 +1,14 @@
 // src/components/MovieCard.jsx
-import {Link} from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 function MovieCard({ movie }) { 
     return (
-        <Link to={`/movie/${movie.imdbID}`}>
+        <RouterLink  to={`/movie/${movie.imdbID}`}>
         <div className="movie-card">
             <img src={movie.Poster} alt={movie.Title}/>
             <h3>{movie.Title}</h3>
             <p>{movie.Year}</p>
         </div>
-        </Link>
+        </RouterLink>
     );
 }
 export default MovieCard;

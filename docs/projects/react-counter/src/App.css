@@ -1,0 +1,25 @@
+body ,.card{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.card {
+  padding: 1em;
+  border: 5px solid #ccc;
+  border-radius: 40px;
+  text-align: center;
+  height: 400px;
+}
+h2 , h1 {
+  font-size: 4em;
+  margin: 0.5em;
+}
+.buttons {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+button {
+  font-size: 1.2em;
+  padding: 0.5em 1em;
+}
